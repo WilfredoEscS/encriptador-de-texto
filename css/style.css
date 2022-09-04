@@ -92,6 +92,7 @@ html{
     height: 60px;
     border: 1px solid ;
     font-size: 16px;
+    cursor: pointer;
 }
 
 /* CSS del mensaje encriptado o desencriptado */
@@ -106,7 +107,7 @@ html{
     min-width: 340px;
 }
 
-.encryptor-result__imagen{
+.encryptor-result__image{
     margin: 10px 32px;
     width: 250px;
 }
@@ -115,14 +116,35 @@ html{
     margin: 0 32px;
     text-align: center;
 }
-.encryptor-result__alert{
+.encryptor-result__message::placeholder{
     font-size: 24px;
     text-align: center;
     font-weight: bold;
     margin: 10px 32px;
+    color: black;
+    opacity: 1;
+    line-height: normal;
 }
-#copy-button.buttons{
+
+.encryptor-result__message{
+    background: none;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    text-align: center;
+    margin: 0 auto;
+    resize: none;
+
+}
+
+
+.copy-button.buttons{
     display: none;
+    align-items: center;
+    justify-content: center;
 }
 /* CSS del pie de pagina */
 .grid-encryptor .encryptor-footer{

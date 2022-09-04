@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <title>Encriptador de texto</title>
+    </head>
+    <body>
+        <main class="grid-encryptor">
+            <header class="encryptor-header">
+                <img class="encryptor-header__image" src="assets/images/logo.png" alt="">
+                <h1 class="encryptor-header__title" >Encriptador de texto</h1>
+            </header>        
+            <section class="data-input">
+                    <textarea class="data-input__textarea" cols="auto" rows="6" placeholder="Ingrese el texto aqui"></textarea>
+
+                <div class="alert">
+                    <img src="assets/images/alerta.png" alt="">
+                    <p> Solo letras minusculas y sin acentos.</p>
+                </div>
+
+                <div class="data-input__buttons">
+                    <button class="buttons" id="encrypt-button">Encriptar</button>
+                    <button class="buttons" id="decrypt-button">Desencriptar</button>
+                </div>
+            </section>
+            <section class="encryptor-result">
+                <img class="encryptor-result__imagen" src="assets/images/dibujo.png" alt="">
+                <p class="encryptor-result__alert" >Ningun mensaje fue encontrado</p>
+                <p class="encryptor-result__info" >Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="buttons" id="copy-button">Copiar</button>
+            </section>
+            <footer class="encryptor-footer">
+                <p class="encryptor-footer__text">Created with ❤️ by Wilfredo Escobar - 2022</p>
+                <a href="https://github.com/WilfredoEscS" target="_blank"><img class="encryptor-footer__images" src="assets/images/logo_github.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/wilfredo-escobar/" target="_blank"><img class="encryptor-footer__images" src="assets/images/logo_linkedin.png" alt=""></a>
+                
+            </footer>
+        </main>
+    </body>
+</html>

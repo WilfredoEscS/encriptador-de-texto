@@ -1,0 +1,143 @@
+html{
+    background: #f3f5fc;
+    font-family: 'Inter', sans-serif;
+
+}
+.grid-encryptor{
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    grid-template-rows: auto 80vh auto ;
+    grid-template-areas: 
+    "encryptor-header encryptor-header"
+    "data-input encryptor-result"
+    "encryptor-footer encryptor-footer"
+    ;
+}
+/* CSS del encabezado */
+.grid-encryptor .encryptor-header{
+    grid-area: encryptor-header;
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    grid-template-columns: 0.1fr 1fr;
+}
+
+.encryptor-header__image{
+    place-self: center;
+}
+
+.encryptor-header__title{
+    margin:20px;
+    font-weight: 600;
+    font-size: x-large;
+    color: #0A3871;
+}
+/* CSS de la zona del encriptador */
+.grid-encryptor .data-input{
+    grid-area: data-input;
+    display: grid;
+    grid-template-rows: 2.5fr 0.1fr 0.4fr;
+    margin: 0 auto;
+    align-items: center;
+}
+.data-input__textarea{
+    background: none;
+    border: none;
+    margin: 20px 20px 20px 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    text-align: center;
+
+}
+
+.data-input__textarea::placeholder{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+}
+.data-input__textarea:focus{
+    outline: none;
+}
+.alert{
+    display: flex;
+    margin-left: 40px;
+}
+.alert p{
+    margin-left: 10px;
+}
+.data-input__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#encrypt-button{
+    background: #0A3871;
+    color: #FFF;
+    margin-left: 40px;
+}
+#decrypt-button{
+    background: #D8DFE8;
+    color: #0A3871;
+    border-color: #0A3871;
+}
+.buttons{
+    margin: 20px;
+    border-radius: 18px ;
+    width: 300px;
+    height: 60px;
+    border: 1px solid ;
+    font-size: 16px;
+}
+
+/* CSS del mensaje encriptado o desencriptado */
+.grid-encryptor .encryptor-result{
+    grid-area: encryptor-result;
+    display: flex;
+    flex-flow: column;
+    background: #FFF;
+    border-radius: 32px;
+    justify-content: center;
+    margin-right: 20px;
+    min-width: 340px;
+}
+
+.encryptor-result__imagen{
+    margin: 10px 32px;
+    width: 250px;
+}
+
+.encryptor-result__info{
+    margin: 0 32px;
+    text-align: center;
+}
+.encryptor-result__alert{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 32px;
+}
+#copy-button.buttons{
+    display: none;
+}
+/* CSS del pie de pagina */
+.grid-encryptor .encryptor-footer{
+    grid-area: encryptor-footer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+}
+.encryptor-footer__text{
+    margin-right: 10px;
+}
+
+.encryptor-footer__images{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}

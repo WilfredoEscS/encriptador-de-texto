@@ -139,7 +139,9 @@ html{
     resize: none;
 
 }
-
+.encryptor-result__message:focus{
+    outline: none;
+}
 
 .copy-button.buttons{
     display: none;

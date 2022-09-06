@@ -25,14 +25,14 @@
 
                 <div class="data-input__buttons">
                     <button class="buttons" id="encrypt-button" onclick="encryptBtn()">Encriptar</button>
-                    <button class="buttons" id="decrypt-button">Desencriptar</button>
+                    <button class="buttons" id="decrypt-button" onclick="decryptBtn()">Desencriptar</button>
                 </div>
             </section>
             <section class="encryptor-result">
                 <img class="encryptor-result__image" src="img/dibujo.png" alt="">
-                <textarea class="encryptor-result__message" disabled placeholder="Ningun mensaje fue encontrado" cols="17"></textarea>
+                <textarea class="encryptor-result__message" readonly placeholder="Ningun mensaje fue encontrado" cols="17"></textarea>
                 <p class="encryptor-result__info" >Ingresa el texto que desees encriptar o desencriptar.</p>
-                <button class="buttons copy-button" onclick="copyBtn()" >Copiar</button>
+                <button class="buttons copy-button" onclick="copyToClipboard()" >Copiar</button>
             </section>
             <footer class="encryptor-footer">
                 <p class="encryptor-footer__text">Created with ❤️ by Wilfredo Escobar - 2022</p>

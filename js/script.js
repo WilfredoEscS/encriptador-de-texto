@@ -58,6 +58,6 @@ function copyToClipboard() {
     info.style.display = "block";
     copyBtn.style.display = "none" ;
     message.setAttribute('rows','2');
-    alert('Texto copiado al portapapeles');
+    swal('','Texto copiado al portapapeles','success');
     imputText.focus();
 }

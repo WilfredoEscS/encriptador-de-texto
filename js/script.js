@@ -4,6 +4,8 @@ const image = document.querySelector(".encryptor-result__image");
 const info = document.querySelector(".encryptor-result__info");
 const copyBtn = document.querySelector(".copy-button")
 
+imputText.value = "";
+message.value = "";
 /* Funcion para desencriptar texto */
 function encrypt(encryptedText) {
     let encryptionKeys = [["e","enter"], ["i","imes"], ["a","ai"], ["o","ober"], ["u","ufat"]];
@@ -54,7 +56,6 @@ function copyToClipboard() {
     message.select()
     navigator.clipboard.writeText(message.value)
     message.value = "";
-    image.style.display = "block";
     info.style.display = "block";
     copyBtn.style.display = "none" ;
     message.setAttribute('rows','2');

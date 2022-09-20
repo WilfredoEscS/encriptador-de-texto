@@ -1,167 +1,269 @@
-html{
-    background: #f3f5fc;
-    font-family: 'Inter', sans-serif;
-
+html {
+  background: #f3f5fc;
+  font-family: "Inter", sans-serif;
 }
-.grid-encryptor{
-    display: grid;
-    grid-template-columns: 3fr 1fr ;
-    grid-template-rows: auto 80vh auto ;
-    grid-template-areas: 
+
+.grid-encryptor {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: minmax(70px, auto) 80vh minmax(50px, auto);
+  height: 100vh;
+  grid-template-areas:
     "encryptor-header encryptor-header"
     "data-input encryptor-result"
-    "encryptor-footer encryptor-footer"
-    ;
+    "encryptor-footer encryptor-footer";
 }
+
 /* CSS del encabezado */
-.grid-encryptor .encryptor-header{
-    grid-area: encryptor-header;
-    display: grid;
-    align-items: center;
-    justify-content: left;
-    grid-template-columns: 0.1fr 1fr;
+.grid-encryptor .encryptor-header {
+  grid-area: encryptor-header;
+  display: grid;
+  align-items: center;
+  justify-content: left;
+  grid-template-columns: 0.1fr 1fr;
 }
 
-.encryptor-header__image{
-    place-self: center;
+.encryptor-header__image {
+  place-self: center;
 }
 
-.encryptor-header__title{
-    margin:20px;
-    font-weight: 600;
-    font-size: x-large;
-    color: #0A3871;
+.encryptor-header__title {
+  margin: 20px;
+  font-weight: 600;
+  font-size: x-large;
+  color: #0a3871;
 }
+
 /* CSS de la zona del encriptador */
-.grid-encryptor .data-input{
-    grid-area: data-input;
-    display: grid;
-    grid-template-rows: 2.5fr 0.1fr 0.4fr;
-    margin: 0 auto;
-    align-items: center;
-}
-.data-input__textarea{
-    background: none;
-    border: none;
-    margin: 20px 20px 20px 40px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    color: #0A3871;
-    text-align: center;
-
+.grid-encryptor .data-input {
+  grid-area: data-input;
+  display: grid;
+  grid-template-rows: 2.5fr 0.1fr 0.4fr;
+  margin: 0 auto;
+  align-items: center;
 }
 
-.data-input__textarea::placeholder{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    color: #0A3871;
+.data-input__textarea {
+  background: none;
+  border: none;
+  margin: 20px 20px 20px 40px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #0a3871;
+  text-align: center;
 }
-.data-input__textarea:focus{
-    outline: none;
+
+.data-input__textarea::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #0a3871;
 }
-.alert{
-    display: flex;
-    margin-left: 40px;
+
+.data-input__textarea:focus {
+  outline: none;
 }
-.alert p{
-    margin-left: 10px;
+
+.alert {
+  display: grid;
+  margin-left: 40px;
+  grid-auto-flow: column;
+  justify-content: flex-start;
 }
-.data-input__buttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.alert p {
+  margin-left: 10px;
 }
-#encrypt-button{
-    background: #0A3871;
-    color: #FFF;
-    margin-left: 40px;
+
+.data-input__buttons {
+  display: grid;
+  grid-auto-flow: column;
 }
-#decrypt-button{
-    background: #D8DFE8;
-    color: #0A3871;
-    border-color: #0A3871;
+
+#encrypt-button {
+  background: #0a3871;
+  color: #fff;
 }
-.buttons{
-    margin: 20px;
-    border-radius: 18px ;
-    width: 300px;
-    height: 60px;
-    border: 1px solid ;
-    font-size: 16px;
-    cursor: pointer;
+
+#decrypt-button {
+  background: #d8dfe8;
+  color: #0a3871;
+  border-color: #0a3871;
+}
+
+.buttons {
+  margin: 20px;
+  border-radius: 18px;
+  width: 300px;
+  height: 60px;
+  border: 1px solid;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 /* CSS del mensaje encriptado o desencriptado */
-.grid-encryptor .encryptor-result{
-    grid-area: encryptor-result;
-    display: flex;
-    flex-flow: column;
-    background: #FFF;
-    border-radius: 32px;
-    justify-content: center;
-    margin-right: 20px;
-    min-width: 340px;
+.grid-encryptor .encryptor-result {
+  grid-area: encryptor-result;
+  display: grid;
+  background: #fff;
+  border-radius: 32px;
+  margin: 20px;
+  min-width: 340px;
 }
 
-.encryptor-result__image{
-    margin: 10px 32px;
-    width: 250px;
+.encryptor-result__image {
+  margin: 0 auto;
+  width: 250px;
 }
 
-.encryptor-result__info{
-    margin: 0 32px;
-    text-align: center;
-}
-.encryptor-result__message::placeholder{
-    font-size: 24px;
-    text-align: center;
-    font-weight: bold;
-    color: black;
-    opacity: 1;
-    line-height: normal;
-    vertical-align:middle;
+.encryptor-result__info {
+  margin: 0 32px;
+  text-align: center;
 }
 
-.encryptor-result__message{
-    background: none;
-    border: none;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    color: #0A3871;
-    text-align: center;
-    margin: 0 auto;
-    resize: none;
-
-}
-.encryptor-result__message:focus{
-    outline: none;
+.encryptor-result__message::placeholder {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  opacity: 1;
+  line-height: normal;
+  vertical-align: middle;
 }
 
-.copy-button.buttons{
-    display: none;
-    align-items: center;
-    justify-content: center;
+.encryptor-result__message {
+  background: none;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #0a3871;
+  text-align: center;
+  margin: auto;
+  resize: none;
 }
+
+.encryptor-result__message:focus {
+  outline: none;
+}
+
+.copy-button.buttons {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
 /* CSS del pie de pagina */
-.grid-encryptor .encryptor-footer{
-    grid-area: encryptor-footer;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding: 10px;
-}
-.encryptor-footer__text{
-    margin-right: 10px;
+.grid-encryptor .encryptor-footer {
+  grid-area: encryptor-footer;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
-.encryptor-footer__images{
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.encryptor-footer__text {
+  margin-right: 10px;
+}
+
+.encryptor-footer__images {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Diseño responsive */
+@media screen and (max-width: 1060px) {
+  .grid-encryptor {
+    max-width: 700px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr 1fr 1fr;
+    grid-template-areas:
+      "encryptor-header"
+      "data-input"
+      "encryptor-result"
+      "encryptor-footer";
+  }
+  .grid-encryptor .data-input {
+    grid-area: data-input;
+    display: grid;
+    grid-template-rows: 400px 10px 100px;
+  }
+  .data-input__textarea {
+    height: 350px;
+    width: 600px;
+  }
+  .data-input__buttons {
+    margin: 0 auto;
+  }
+
+  .grid-encryptor .encryptor-result {
+    justify-content: center;
+    height: 350px;
+  }
+  .encryptor-result__image {
+    display: none;
+  }
+  .encryptor-result__info {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .encryptor-result__message {
+    width: 500px;
+    height: 250px;
+  }
+
+  .copy-button.buttons {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .encryptor-header__image {
+    margin-left: 10px;
+  }
+
+  .data-input__textarea {
+    height: 300px;
+    width: 300px;
+  }
+
+  .data-input__buttons {
+    grid-auto-flow: row;
+  }
+
+  .grid-encryptor .data-input {
+    grid-template-rows: 362px 10px 175px;
+  }
+
+  .alert {
+    margin-left: 10px;
+    justify-content: center;
+  }
+
+  .buttons {
+    margin: 5px;
+  }
+
+  .grid-encryptor .encryptor-result {
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .encryptor-result__message {
+    width: 290px;
+    height: 200px;
+  }
+  .grid-encryptor .encryptor-footer {
+    font-size: 0.75rem;
+  }
 }
